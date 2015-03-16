@@ -1,0 +1,2 @@
+include ':app', ':dir_selector_lib'
+project(':dir_selector_lib').projectDir = new File('dir_selector_lib')

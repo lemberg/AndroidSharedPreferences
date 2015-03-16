@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+            android:key="enable_background"
+            android:title="Work in background"
+            android:summary="May increase battery consumption"
+            android:defaultValue="true"/>
+    <EditTextPreference
+            android:key="server_address"
+            android:title="Server address"
+            android:summary="test1.server.com"
+            android:defaultValue="server.com"
+            android:dialogTitle="Server address"/>
+    <PreferenceCategory
+            android:title="Extended settings">
+        <ListPreference
+                android:key="color"
+                android:title="Color"
+                android:summary="Red"
+                android:entries="@array/color_entries"
+                android:entryValues="@array/color_values"/>
+        <MultiSelectListPreference
+                android:key="colors"
+                android:title="Multiple colors"
+                android:summary="none"
+                android:entries="@array/color_entries"
+                android:entryValues="@array/color_values"/>
+        <SwitchPreference
+                android:key="switch"
+                android:title="Enable audio"
+                android:summary="Play notification sound"/>
+        <com.ls.shared_prefs_article.QualityPreference
+                android:key="quality"
+                android:title="Recording quality"
+                android:summary="Define recording quality"
+                android:dialogTitle="Recording quality"
+                android:positiveButtonText="@android:string/ok"
+                android:negativeButtonText="@android:string/cancel" />
+        <com.ls.directoryselector.DirectoryPreference
+                android:key="store_path"
+                android:title="Directory"
+                android:summary="Path"
+                android:positiveButtonText="@android:string/ok"
+                android:negativeButtonText="@android:string/cancel" />
+    </PreferenceCategory>
+</PreferenceScreen>
